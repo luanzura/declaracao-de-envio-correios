@@ -12,16 +12,77 @@
             <h2>DADOS DECLARAÇÃO DE CONTEÚDO</h2>
             <h4>DESTINATÁRIO</h4>
         </div>
-        <input type="text" required id="nome" placeholder="Nome">
-        <input type="text" required id="rua" placeholder="Endereço">
-        <input type="number" required id="numero" placeholder="Numero">
-        <input type="text" required id="cidade" placeholder="Cidade">
-        <input type="text" required id="uf" placeholder="UF">
-        <input type="text" required id="cep" placeholder="CEP">
-        <input type="text" required id="conteudo" placeholder="Conteúdo">
-        <input type="text" required id="quantidade" placeholder="Quantidade">
-        <input type="number" required id="valor" placeholder="Valor">
-        <input type="number" required id="peso" placeholder="Peso Total (kg)">
+        <div class="form">
+            <div class="nome">
+                Nome: <br>
+                <input type="text" id="nome" placeholder="Ex.: Maria de Souza">
+            </div>
+            <div class="rua">
+                Endereço: <br>
+                <input type="text" id="rua" placeholder="Ex.: Rua Sete de Setembro">
+            </div>
+            <div class="numero">
+                Numero: <br>
+                <input type="number" id="numero" placeholder="Ex.: 4">
+            </div>
+            <div class="cidade">    
+                Cidade: <br>
+                <input type="text" id="cidade" placeholder="Ex. São Paulo">
+            </div>
+            <div>    
+                Estado: <br>
+                <select id="uf" name="estado">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                    <option value="EX">Estrangeiro</option>
+                </select>
+            </div>
+            <div>
+                CEP: <br>
+                <input type="text" id="cep" placeholder="Ex.: 01000-001">
+            </div>
+            <div>    
+                Conteúdo: <br>
+                <input type="text" id="conteudo" placeholder="Ex.: Bonés">
+            </div>
+            <div>    
+                Quantidade: <br>
+                <input type="text" id="quantidade" placeholder="Ex.: 10">
+            </div>
+            <div>
+                Valor: <br>
+                <input type="number" id="valor" placeholder="Ex.: 130,00">
+            </div>
+            <div>    
+                Peso Total (gr): <br>
+                <input type="number" id="peso" placeholder="Ex. 1.300">
+            </div>    
+        </div>
         <button onclick="gerarDeclaracao()">Gerar</button>
     </div>
     <div class="print">
@@ -53,7 +114,7 @@
             <div><strong>CONTEÚDO:</strong> <span id="conteudo_destinatario"></span></div>
             <div><strong>QUANTIDADE:</strong> <span id="quantidade_destinatario"></span></div>
             <div><strong>VALOR:</strong> R$<span id="valor_destinatario"></span></div>
-            <div><strong>PESO:</strong> <span id="peso_destinatario"></span>KG</div>
+            <div><strong>PESO:</strong> <span id="peso_destinatario"></span>GR</div>
         </div>
         <div class="decaracao">
             <h3>D E C L A R A Ç Ã O</h3> 
