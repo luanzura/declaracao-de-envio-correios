@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: graycale;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.dados {
+    display: grid;
+    width: 20%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.dados h2, h4 {
+    padding: 10px 0;
+}
+
+.dados input {
+    height: 30px;
+    margin: 5px 0;
+}
+
+.dados button {
+    margin: 10px auto 0 auto;
+    width: 150px;
+    height: 50px;
+}
+
+.print {
+    border: 1px solid black;
+    margin: 50px;
+}
+
+.titulo h2 {
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+.container_dados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.remetente h3 {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    text-align: center;
+    padding: 7px 0;
+}
+
+.remetente div {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    padding: 7px 0 7px 5px;
+}
+
+.destinatario h3 {
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding: 7px 0;
+}
+
+.destinatario div {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    padding: 7px 0 7px 5px;
+}
+
+.print h3 {
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.bens {
+    display: flex;
+}
+
+.bens div {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    padding: 10px 0 10px 5px;
+    flex: 1;
+}
+
+.decaracao {
+    display: grid;
+}
+
+.decaracao p {
+    padding: 10px;
+}
+.assinatura {
+    border-bottom: 1px solid black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.obs {
+    padding: 10px;
+}
+
+@media print {
+    .print {
+        display: block;
+    }
+
+    .dados {
+        display: none;
+    }
+}
+
+
