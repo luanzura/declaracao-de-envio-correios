@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="d-flex gap-4 flex-column justify-content-center align-items-center" style="height: 100vh;">
+    <!-- DADOS REMETENTE -->
+    <form id="remente" class="row shadow g-3 border rounded p-4" style="width: 40%;">
+      <h3 class="text-center">DADOS DO REMETENTE</h3>
+      <div class="col-md-12">
+        <label for="re-nome" class="form-label">Nome completo</label>
+        <input type="text" class="form-control" id="re-nome" required>
+      </div>
+      <div class="col-md-3">
+        <label for="re-cep" class="form-label">CEP</label>
+        <input type="number" class="form-control" id="re-cep" required>
+      </div>
+      <div class="col-md-7">
+        <label for="re-rua" class="form-label">Rua</label>
+        <input type="text" class="form-control" id="re-rua" required>
+      </div>
+      <div class="col-md-2">
+        <label for="re-numero" class="form-label">Número</label>
+        <input type="number" class="form-control" id="re-numero" required>
+      </div>
+      <div class="col-md-4">
+        <label for="re-cidade" class="form-label">Cidade</label>
+        <input type="text" class="form-control" id="re-cidade" required>
+      </div>
+      <div class="col-md-3">
+        <label for="re-estado" class="form-label">Estado</label>
+        <select class="form-select" id="re-estado" required>
+          <option selected disabled value="">Escolha</option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AM">Amazonas</option>
+          <option value="AP">Amapá</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+          <option value="EX">Estrangeiro</option>
+        </select>
+      </div>
+      <div class="col-12 text-center mt-4">
+        <button class="btn btn-lg btn-primary" onclick="destinatarioIr()" type="button">Próximo</button>
+      </div>
+    </form>
+    <!-- DADOS DESTINATARIO -->
+    <form id="destinatario" class="d-none row shadow g-3 border rounded p-4" style="width: 40%;">
+      <h3 class="text-center">DADOS DO DESTINATÁRIO</h3>
+      <div class="col-md-12">
+        <label for="de-nome" class="form-label">Nome completo</label>
+        <input type="text" class="form-control" id="de-nome" required>
+      </div>
+      <div class="col-md-3">
+        <label for="de-cep" class="form-label">CEP</label>
+        <input type="number" class="form-control" id="de-cep" required>
+      </div>
+      <div class="col-md-7">
+        <label for="de-rua" class="form-label">Rua</label>
+        <input type="text" class="form-control" id="de-rua" required>
+      </div>
+      <div class="col-md-2">
+        <label for="de-numero" class="form-label">Número</label>
+        <input type="number" class="form-control" id="de-numero" required>
+      </div>
+      <div class="col-md-4">
+        <label for="de-cidade" class="form-label">Cidade</label>
+        <input type="text" class="form-control" id="de-cidade" required>
+      </div>
+      <div class="col-md-3">
+        <label for="de-estado" class="form-label">Estado</label>
+        <select class="form-select" id="de-estado" required>
+          <option selected disabled value="">Escolha</option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AM">Amazonas</option>
+          <option value="AP">Amapá</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+          <option value="EX">Estrangeiro</option>
+        </select>
+      </div>
+      <div class="col-12 text-center mt-4">
+        <button class="btn btn-lg btn-primary" type="button" onclick="destinatarioVoltar()">Voltar</button>
+        <button class="btn btn-lg btn-primary" type="button" onclick="remetenteIr()">Próximo</button>
+      </div>
+    </form>
+    <!-- CONTEUDO -->
+    <form id="declaracao-conteudo" class="d-none row shadow g-3 border rounded p-4" style="width: 40%;">
+      <h3 class="text-center">CONTEÚDO</h3>
+      <div class="col-md-12">
+        <label for="conteudo" class="form-label">Conteúdo</label>
+        <input type="text" class="form-control" id="conteudo" placeholder="Ex. Livros" required>
+      </div>
+      <div class="col-md-4">
+        <label for="quantidade" class="form-label">Quantidade</label>
+        <input type="number" class="form-control" id="quantidade" placeholder="Ex. 4" required>
+      </div>
+      <div class="col-md-4">
+        <label for="valor" class="form-label">Valor</label>
+        <input type="number" class="form-control" id="valor" placeholder="50,00" required>
+      </div>
+      <div class="col-md-4">
+        <label for="peso" class="form-label">Peso (kg)</label>
+        <input type="number" class="form-control" id="peso" placeholder="1,3" required>
+      </div>
+      <div class="col-12 text-center mt-4">
+        <button class="btn btn-lg btn-primary" type="button" onclick="rementeVoltar()">Voltar</button>
+        <button class="btn btn-lg btn-primary" type="button" onclick="gerarDeracao()">Gerar</button>
+      </div>
+    </form>
+    <!-- PRINT -->
+    <div id="print" class="d-none border row" style="width: 60%;">
+      <div class="col-12 text-center border-bottom pt-2"><h3>DECLARAÇÃO DE CONTEÚDO</h3></div>
+      <div class="col-6 pt-2 text-center border-bottom border-end"><h5>REMETENTE</h5></div>
+      <div class="col-6 pt-2 text-center border-bottom"><h5>DESTINATÁRIO</h5></div>
+      <div class="col-6 pt-1 border-bottom border-end"><strong>NOME: </strong><span id="r-re-nome"></span></div>
+      <div class="col-6 pt-1 border-bottom"><strong>NOME: </strong><span id="r-de-nome"></span></div>
+      <div class="col-6 pt-1 border-bottom border-end"><strong>ENDEREÇO: </strong><span id="r-re-rua"></span></div>
+      <div class="col-6 pt-1 border-bottom border-end"><strong>ENDEREÇO: </strong><span id="r-de-rua"></span></div>
+      <div class="col-3 pt-1 border-bottom border-end"><strong>NÚMERO: </strong><span id="r-re-numero"></span></div>
+      <div class="col-3 pt-1 border-bottom border-end"><strong>CEP: </strong><span id="r-re-cep"></span></div>
+      <div class="col-3 pt-1 border-bottom border-end"><strong>NÚMERO: </strong><span id="r-de-numero"></span></div>
+      <div class="col-3 pt-1 border-bottom border-end"><strong>CEP: </strong><span id="r-de-cep"></span></div>
+      <div class="col-3 pt-1 border-bottom border-end"><strong>CIDADE: </strong><span id="r-re-cidade"></span></div>
+      <div class="col-3 pt-1 border-bottom border-end"><strong>UF: </strong><span id="r-re-estado"></span></div>
+      <div class="col-3 pt-1 border-bottom border-end"><strong>CIDADE: </strong><span id="r-de-cidade"></span></div>
+      <div class="col-3 pt-1 border-bottom border-end"><strong>UF: </strong><span id="r-de-estado"></span></div>
+      <div class="col-12 text-center border-bottom pt-2"><h4>IDENTIFICAÇÃO DOS BENS</h4></div>
+      <div class="col-4 pt-1 border-bottom border-end"><strong>CONTEÚDO: </strong><span id="r-conteudo"></span></div>
+      <div class="col-2 pt-1 border-bottom border-end"><strong>QTD: </strong><span id="r-quantidade"></span></div>
+      <div class="col-3 pt-1 border-bottom border-end"><strong>VALOR: </strong><span id="r-valor"></span></div>
+      <div class="col-3 pt-1 border-bottom border-end"><strong>PESO: </strong><span id="r-peso"></span></div>
+      <div class="col-12 text-center border-bottom pt-2"><h4>DECLARAÇÃO</h4></div>
+      <div class="col-12 pt-2">
+        <p class="text-star">Declaro que não me enquadro no conceito de contribuinte previsto no art. 4º da Lei Complementar nº 87/1996, 
+          uma vez que não realizo, com habitualidade ou em volume que caracterize intuito comercial, operações de circulação de mercadoria, 
+          ainda que se iniciem no exterior, ou estou dispensado da emissão da nota fiscal por força da legislação tributária vigente, 
+          responsabilizando-me, nos termos da lei e a quem de direito, por informações inverídicas. 
+          Declaro ainda que não estou postando conteúdo inflamável, explosivo, causador de combustão espontânea, 
+          tóxico, corrosivo, gás ou qualquer outro conteúdo que conste na lista de proibições e restrições disponível no site dos Correios:
+          https://www.correios.com.br/enviar/proibicoes-e-restricoes/proibicoes-e-restricoes.</p>
+      </div>
+      <div class="col-4 boder-bottom pt-4 pb-4">Apucarana, <span id="data"></span></div>
+      <div class="col-8 boder-bottom pt-4 pb-4">Assinatura:__________________________________________________</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+  <script src="cep.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

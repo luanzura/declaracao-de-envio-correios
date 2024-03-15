@@ -1,196 +1,25 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: graycale;
+.form-control:focus, .form-select:focus {
+    border-color: orange;
+    box-shadow: 0 0 0 0.2rem rgba(255, 123, 0, 0.25);
+} 
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-body {
-    font-family: sans-serif;
-    background: rgb(248,214,5);
-    background: linear-gradient(120deg, rgba(248,214,5,1) 40%, rgba(0,131,185,1) 75%, rgba(1,59,85,1) 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+button {
+  background-color: orange !important;
+  border: white !important;
 }
 
-.dados {
-    max-width: fit-content;
-    height: fit-content;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.dados h2, h4 {
-    padding: 10px 0;
-    text-align: center;
-    color: rgb(31, 31, 31);
-}
-
-.dados input {
-    height: 35px;
-    width: 100%;
-    margin: 5px 0 20px 0;
-    border: none;
-    border-radius: 5px;
-    padding-left: 10px;
-}
-
-.dados input:focus {
-    outline: none;
-    border: 2px solid #188BA7;
-}
-
-.dados button {
-    display: block;
-    width: 130px;
-    height: 40px;
-    margin: 0 auto;
-    background-color: rgb(94, 94, 94);
-    border: none;
-    border-radius: 10px;
-    color: rgb(231, 231, 231);
-    font-size: 22px;
-    cursor: pointer;
-}
-
-.dados button:hover {
-    background-color: rgb(73, 73, 73);
-    border: 2px solid #188BA7;
-}
-
-.form {
-    display: grid;
-    grid-template-columns:  3fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(4 1fr);
-    column-gap: 10px;
-}
-
-.nome {
-    grid-column: 1 / 5;
-    grid-row: 1 / 2;
-}
-
-.rua {
-    grid-column: 1 / 4;
-    grid-row: 2 / 3;
-}
-
-.numero {
-    grid-column: 4 / 5;
-    grid-row: 2 / 3;
-}
-
-.cidade {
-    grid-column: 1 / 3;
-    grid-row: 3 / 4;
-}
-
-#uf {
-    width: 100%;
-    height: 35px;
-    padding: 0 0 0 5px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 5px;
-}
-
-#uf:focus {
-    outline: none;
-    border: 2px solid #188BA7;
-}
-
-.print {
-    display: none;
-    border: 1px solid black;
-    margin: 50px;
-}
-
-.titulo h2 {
-    border-bottom: 1px solid black;
-    text-align: center;
-    padding: 10px;
-}
-
-.container_dados {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.remetente h3 {
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    text-align: center;
-    padding: 7px 0;
-}
-
-.remetente div {
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    padding: 7px 0 7px 5px;
-}
-
-.destinatario h3 {
-    border-bottom: 1px solid black;
-    text-align: center;
-    padding: 7px 0;
-}
-
-.destinatario div {
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    padding: 7px 0 7px 5px;
-}
-
-.print h3 {
-    border-bottom: 1px solid black;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.bens {
-    display: flex;
-}
-
-.bens div {
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    padding: 10px 0 10px 5px;
-    flex: 1;
-}
-
-.decaracao {
-    display: grid;
-}
-
-.decaracao p {
-    padding: 10px;
-}
-.assinatura {
-    border-bottom: 1px solid black;
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.obs {
-    padding: 10px;
+button:hover {
+  background-color: rgb(235, 152, 0) !important;
 }
 
 @media print {
-    .print {
-        display: block;
-    }
-
-    .dados {
-        display: none;
-    }
+  #print {
+    width: 100% !important;
+  }
 }
-
-
