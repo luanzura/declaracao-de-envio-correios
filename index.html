@@ -8,154 +8,160 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="d-flex gap-4 flex-column justify-content-center align-items-center" style="height: 100vh;">
+  <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
     <!-- DADOS REMETENTE -->
-    <form id="remente" class="row shadow g-3 border rounded p-4" style="width: 40%;">
-      <h3 class="text-center">DADOS DO REMETENTE</h3>
-      <div class="col-md-12">
-        <label for="re-nome" class="form-label">Nome completo</label>
-        <input type="text" class="form-control" id="re-nome" required>
-      </div>
-      <div class="col-md-3">
-        <label for="re-cep" class="form-label">CEP</label>
-        <input type="number" class="form-control" id="re-cep" required>
-      </div>
-      <div class="col-md-7">
-        <label for="re-rua" class="form-label">Rua</label>
-        <input type="text" class="form-control" id="re-rua" required>
-      </div>
-      <div class="col-md-2">
-        <label for="re-numero" class="form-label">Número</label>
-        <input type="number" class="form-control" id="re-numero" required>
-      </div>
-      <div class="col-md-4">
-        <label for="re-cidade" class="form-label">Cidade</label>
-        <input type="text" class="form-control" id="re-cidade" required>
-      </div>
-      <div class="col-md-3">
-        <label for="re-estado" class="form-label">Estado</label>
-        <select class="form-select" id="re-estado" required>
-          <option selected disabled value="">Escolha</option>
-          <option value="AC">Acre</option>
-          <option value="AL">Alagoas</option>
-          <option value="AM">Amazonas</option>
-          <option value="AP">Amapá</option>
-          <option value="BA">Bahia</option>
-          <option value="CE">Ceará</option>
-          <option value="DF">Distrito Federal</option>
-          <option value="ES">Espírito Santo</option>
-          <option value="GO">Goiás</option>
-          <option value="MA">Maranhão</option>
-          <option value="MT">Mato Grosso</option>
-          <option value="MS">Mato Grosso do Sul</option>
-          <option value="MG">Minas Gerais</option>
-          <option value="PA">Pará</option>
-          <option value="PB">Paraíba</option>
-          <option value="PR">Paraná</option>
-          <option value="PE">Pernambuco</option>
-          <option value="PI">Piauí</option>
-          <option value="RJ">Rio de Janeiro</option>
-          <option value="RN">Rio Grande do Norte</option>
-          <option value="RS">Rio Grande do Sul</option>
-          <option value="RO">Rondônia</option>
-          <option value="RR">Roraima</option>
-          <option value="SC">Santa Catarina</option>
-          <option value="SP">São Paulo</option>
-          <option value="SE">Sergipe</option>
-          <option value="TO">Tocantins</option>
-          <option value="EX">Estrangeiro</option>
-        </select>
-      </div>
-      <div class="col-12 text-center mt-4">
-        <button class="btn btn-lg btn-primary" onclick="destinatarioIr()" type="button">Próximo</button>
-      </div>
-    </form>
+    <div id="remente" class="col-lg-6 mx-4">
+      <form class="row shadow border rounded p-4">
+        <h3 class="text-center col-lg-12">DADOS DO REMETENTE</h3>
+        <div class="col-lg-12 pb-3">
+          <label for="re-nome" class="form-label">Nome completo</label>
+          <input type="text" class="form-control" id="re-nome" required>
+        </div>
+        <div class="col-lg-3 pb-3">
+          <label for="re-cep" class="form-label">CEP</label>
+          <input type="number" class="form-control" id="re-cep" required>
+        </div>
+        <div class="col-lg-7 pb-3">
+          <label for="re-rua" class="form-label">Rua</label>
+          <input type="text" class="form-control" id="re-rua" required>
+        </div>
+        <div class="col-lg-2 pb-3">
+          <label for="re-numero" class="form-label">Número</label>
+          <input type="number" class="form-control" id="re-numero" required>
+        </div>
+        <div class="col-lg-4 pb-3">
+          <label for="re-cidade" class="form-label">Cidade</label>
+          <input type="text" class="form-control" id="re-cidade" required>
+        </div>
+        <div class="col-lg-3 pb-3">
+          <label for="re-estado" class="form-label">Estado</label>
+          <select class="form-select" id="re-estado" required>
+            <option selected disabled value="">Escolha</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AM">Amazonas</option>
+            <option value="AP">Amapá</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+            <option value="EX">Estrangeiro</option>
+          </select>
+        </div>
+        <div class="col-12 text-center mt-4">
+          <button class="btn btn-lg btn-primary" onclick="destinatarioIr()" type="button">Próximo</button>
+        </div>
+      </form>
+    </div>
     <!-- DADOS DESTINATARIO -->
-    <form id="destinatario" class="d-none row shadow g-3 border rounded p-4" style="width: 40%;">
-      <h3 class="text-center">DADOS DO DESTINATÁRIO</h3>
-      <div class="col-md-12">
-        <label for="de-nome" class="form-label">Nome completo</label>
-        <input type="text" class="form-control" id="de-nome" required>
-      </div>
-      <div class="col-md-3">
-        <label for="de-cep" class="form-label">CEP</label>
-        <input type="number" class="form-control" id="de-cep" required>
-      </div>
-      <div class="col-md-7">
-        <label for="de-rua" class="form-label">Rua</label>
-        <input type="text" class="form-control" id="de-rua" required>
-      </div>
-      <div class="col-md-2">
-        <label for="de-numero" class="form-label">Número</label>
-        <input type="number" class="form-control" id="de-numero" required>
-      </div>
-      <div class="col-md-4">
-        <label for="de-cidade" class="form-label">Cidade</label>
-        <input type="text" class="form-control" id="de-cidade" required>
-      </div>
-      <div class="col-md-3">
-        <label for="de-estado" class="form-label">Estado</label>
-        <select class="form-select" id="de-estado" required>
-          <option selected disabled value="">Escolha</option>
-          <option value="AC">Acre</option>
-          <option value="AL">Alagoas</option>
-          <option value="AM">Amazonas</option>
-          <option value="AP">Amapá</option>
-          <option value="BA">Bahia</option>
-          <option value="CE">Ceará</option>
-          <option value="DF">Distrito Federal</option>
-          <option value="ES">Espírito Santo</option>
-          <option value="GO">Goiás</option>
-          <option value="MA">Maranhão</option>
-          <option value="MT">Mato Grosso</option>
-          <option value="MS">Mato Grosso do Sul</option>
-          <option value="MG">Minas Gerais</option>
-          <option value="PA">Pará</option>
-          <option value="PB">Paraíba</option>
-          <option value="PR">Paraná</option>
-          <option value="PE">Pernambuco</option>
-          <option value="PI">Piauí</option>
-          <option value="RJ">Rio de Janeiro</option>
-          <option value="RN">Rio Grande do Norte</option>
-          <option value="RS">Rio Grande do Sul</option>
-          <option value="RO">Rondônia</option>
-          <option value="RR">Roraima</option>
-          <option value="SC">Santa Catarina</option>
-          <option value="SP">São Paulo</option>
-          <option value="SE">Sergipe</option>
-          <option value="TO">Tocantins</option>
-          <option value="EX">Estrangeiro</option>
-        </select>
-      </div>
-      <div class="col-12 text-center mt-4">
-        <button class="btn btn-lg btn-primary" type="button" onclick="destinatarioVoltar()">Voltar</button>
-        <button class="btn btn-lg btn-primary" type="button" onclick="remetenteIr()">Próximo</button>
-      </div>
-    </form>
+    <div id="destinatario" class="col-lg-6 mx-4 d-none">
+      <form class="row shadow g-3 border rounded p-4">
+        <h3 class="text-center">DADOS DO DESTINATÁRIO</h3>
+        <div class="col-lg-12">
+          <label for="de-nome" class="form-label">Nome completo</label>
+          <input type="text" class="form-control" id="de-nome" required>
+        </div>
+        <div class="col-lg-3">
+          <label for="de-cep" class="form-label">CEP</label>
+          <input type="number" class="form-control" id="de-cep" required>
+        </div>
+        <div class="col-lg-7">
+          <label for="de-rua" class="form-label">Rua</label>
+          <input type="text" class="form-control" id="de-rua" required>
+        </div>
+        <div class="col-lg-2">
+          <label for="de-numero" class="form-label">Número</label>
+          <input type="number" class="form-control" id="de-numero" required>
+        </div>
+        <div class="col-lg-4">
+          <label for="de-cidade" class="form-label">Cidade</label>
+          <input type="text" class="form-control" id="de-cidade" required>
+        </div>
+        <div class="col-lg-3">
+          <label for="de-estado" class="form-label">Estado</label>
+          <select class="form-select" id="de-estado" required>
+            <option selected disabled value="">Escolha</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AM">Amazonas</option>
+            <option value="AP">Amapá</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+            <option value="EX">Estrangeiro</option>
+          </select>
+        </div>
+        <div class="col-12 text-center mt-4">
+          <button class="btn btn-lg btn-primary" type="button" onclick="destinatarioVoltar()">Voltar</button>
+          <button class="btn btn-lg btn-primary" type="button" onclick="remetenteIr()">Próximo</button>
+        </div>
+      </form>
+    </div>  
     <!-- CONTEUDO -->
-    <form id="declaracao-conteudo" class="d-none row shadow g-3 border rounded p-4" style="width: 40%;">
-      <h3 class="text-center">CONTEÚDO</h3>
-      <div class="col-md-12">
-        <label for="conteudo" class="form-label">Conteúdo</label>
-        <input type="text" class="form-control" id="conteudo" placeholder="Ex. Livros" required>
-      </div>
-      <div class="col-md-4">
-        <label for="quantidade" class="form-label">Quantidade</label>
-        <input type="number" class="form-control" id="quantidade" placeholder="Ex. 4" required>
-      </div>
-      <div class="col-md-4">
-        <label for="valor" class="form-label">Valor</label>
-        <input type="number" class="form-control" id="valor" placeholder="50,00" required>
-      </div>
-      <div class="col-md-4">
-        <label for="peso" class="form-label">Peso (kg)</label>
-        <input type="number" class="form-control" id="peso" placeholder="1,3" required>
-      </div>
-      <div class="col-12 text-center mt-4">
-        <button class="btn btn-lg btn-primary" type="button" onclick="rementeVoltar()">Voltar</button>
-        <button class="btn btn-lg btn-primary" type="button" onclick="gerarDeracao()">Gerar</button>
-      </div>
-    </form>
+    <div id="declaracao-conteudo" class="d-none col-lg-6 mx-4">
+      <form class="row shadow g-3 border rounded p-4">
+        <h3 class="text-center">CONTEÚDO</h3>
+        <div class="col-md-12">
+          <label for="conteudo" class="form-label">Conteúdo</label>
+          <input type="text" class="form-control" id="conteudo" placeholder="Ex. Livros" required>
+        </div>
+        <div class="col-md-4">
+          <label for="quantidade" class="form-label">Quantidade</label>
+          <input type="number" class="form-control" id="quantidade" placeholder="Ex. 4" required>
+        </div>
+        <div class="col-md-4">
+          <label for="valor" class="form-label">Valor</label>
+          <input type="number" class="form-control" id="valor" placeholder="50,00" required>
+        </div>
+        <div class="col-md-4">
+          <label for="peso" class="form-label">Peso (kg)</label>
+          <input type="number" class="form-control" id="peso" placeholder="1,3" required>
+        </div>
+        <div class="col-12 text-center mt-4">
+          <button class="btn btn-lg btn-primary" type="button" onclick="rementeVoltar()">Voltar</button>
+          <button class="btn btn-lg btn-primary" type="button" onclick="gerarDeracao()">Gerar</button>
+        </div>
+      </form>
+    </div>  
     <!-- PRINT -->
     <div id="print" class="d-none border-2 border row" style="width: 60%;">
       <div class="col-12 border-2 text-center border-bottom pt-2"><h3>DECLARAÇÃO DE CONTEÚDO</h3></div>
