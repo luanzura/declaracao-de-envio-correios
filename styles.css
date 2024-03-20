@@ -14,6 +14,18 @@ button {
   border: white !important;
 }
 
+.marcador-avanco-on {
+  width: fit-content;
+  background-color: orange;
+  color: white;
+}
+
+.marcador-avanco-off {
+  width: fit-content;
+  background-color: rgb(219, 219, 219);
+  color: white;
+}
+
 button:hover {
   background-color: rgb(235, 152, 0) !important;
 }
